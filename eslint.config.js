@@ -22,6 +22,11 @@ export default [
       },
     },
     rules: {
+      // Prefer type-only imports so the runtime surface stays explicit and the API contract is easier to read.
+      "@typescript-eslint/consistent-type-imports": [
+        "error",
+        { prefer: "type-imports", fixStyle: "inline-type-imports" },
+      ],
       // Allow unused variables prefixed with _ (common convention for intentional skips)
       "@typescript-eslint/no-unused-vars": [
         "error",
