@@ -52,3 +52,10 @@ ALL UI components MUST use dark theme colors:
 - Smooth transitions: `transition-all duration-200 ease-in-out`
 - Shadows for depth: `shadow-md`, `shadow-lg`, `shadow-xl`
 - Focus states for accessibility: `focus:ring-2 focus:ring-blue-500`
+
+## TypeScript and formatting conventions
+
+- Prefer explicit TypeScript types for function parameters, return values, and component props.
+- Use `import type` for type-only imports so the runtime bundle stays lean and the intent is clear.
+- Prefer small, descriptive interfaces for object shapes; avoid anonymous inline object type noise when a reusable contract is being modeled.
+- Keep formatting consistent with the repo's ESLint defaults, and favor rules that keep types readable and import intent explicit. The repo enforces `@typescript-eslint/consistent-type-imports` to discourage mixing runtime and type imports.

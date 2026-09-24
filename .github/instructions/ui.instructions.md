@@ -20,6 +20,13 @@ Refer to technology-specific instruction files:
 
 ## Core Principles
 
+### Commenting and documentation conventions
+
+- Comment the intent behind a decision, the business rule it enforces, or the trade-off it represents — not the mechanics the code already makes obvious.
+- Remove comments that merely repeat the next line of code or restate what a variable or function name already tells the reader.
+- If a comment describes a workaround, edge case, or non-obvious decision, keep it close to that logic and update it whenever the code changes.
+- Document reusable component contracts via explicit `Props` interfaces, and keep stale comments out of the codebase.
+
 ### Testability
 
 - Every interactive element MUST include a `data-testid` attribute
